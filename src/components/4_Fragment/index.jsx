@@ -6,6 +6,7 @@ export default class Demo extends Component {
 			<Fragment key={1}>
 				<input type="text"/>
 				<input type="text"/>
+				<>空标签</>
 			</Fragment>
 		)
 	}

@@ -44,18 +44,22 @@ import ReactDOM from 'react-dom'
 } */
 
 function Demo(){
-	//console.log('Demo');
 
 	const [count,setCount] = React.useState(0)
 	const myRef = React.useRef()
 
 	React.useEffect(()=>{
+
+	    //componentDidMount() /  componentDidUpdate()
 		let timer = setInterval(()=>{
 			setCount(count => count+1 )
 		},1000)
+
+        // componentWillUnmount() : 返回的函数
 		return ()=>{
 			clearInterval(timer)
 		}
+		// 传入第二个参数 [] , 表明监测的state ,如果不监测，只调用一次
 	},[])
 
 	//加的回调

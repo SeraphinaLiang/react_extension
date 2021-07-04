@@ -15,7 +15,9 @@ export default class Demo extends Component {
 		//console.log('12行的输出',this.state.count); //0 */
 
 		//函数式的setState
-		this.setState( state => ({count:state.count+1}))
+		this.setState( (state,props) => ({count:state.count+1}),()=>{
+            console.log(this.state.count);
+        })
 	}
 
 	render() {

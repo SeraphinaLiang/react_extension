@@ -5,6 +5,8 @@ import {NavLink,Route} from 'react-router-dom'
 // import About from './About'
 
 import Loading from './Loading'
+
+// 对路由组件进行懒加载
 const Home = lazy(()=> import('./Home') )
 const About = lazy(()=> import('./About'))
 
